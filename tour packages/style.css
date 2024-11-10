@@ -1,0 +1,273 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.tour-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    max-width: 700px;
+}
+
+.tour-title h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.tour-title .location {
+    color: #666;
+    font-size: 14px;
+}
+
+.tour-rating {
+    text-align: right;
+}
+
+.tour-rating p {
+    font-size: 14px;
+    color: #666;
+}
+
+.rating-box {
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+.tour-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.info-item {
+    text-align: center;
+    color: #333;
+}
+
+.icon {
+    font-size: 24px;
+    display: block;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+.gallery-container {
+    max-width: 700px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.thumbnail-container img {
+    width: 80px;
+    height: auto;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.thumbnail-container img:hover {
+    transform: scale(1.1);
+    border: 2px solid #555;
+}
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.tour-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    max-width: 700px;
+}
+
+.tour-title h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.tour-title .location {
+    color: #666;
+    font-size: 14px;
+}
+
+.tour-rating {
+    text-align: right;
+}
+
+.tour-rating p {
+    font-size: 14px;
+    color: #666;
+}
+
+.rating-box {
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+.tour-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.info-item {
+    text-align: center;
+    color: #333;
+}
+
+.icon {
+    font-size: 24px;
+    display: block;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+.overview-section {
+    max-width: 700px;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.overview-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.overview-section p, .overview-section ul {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.overview-section ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+
+.included-excluded {
+    max-width: 800px; 
+    padding: 30px; 
+    background-color: #fff;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 18px; 
+}
+
+.included-excluded h2 {
+    font-size: 24px; 
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+.included, .excluded {
+    line-height: 2; 
+}
+
+.included p {
+    color: green;
+    font-weight: bold;
+    margin: 10px 0; 
+    font-size: 18px; 
+}
+
+.excluded p {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0; 
+    font-size: 18px; 
+}
