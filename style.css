@@ -595,3 +595,250 @@ footer {
     height: auto;
   }
 }
+
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; /* Distanca nga fundi i ekranit */
+    right: 20px; /* Distanca nga ana e djathtë */
+    background-color: #25d366; /* Ngjyra e sfondit (ngjyra e WhatsApp-it) */
+    color: white;
+    border-radius: 50%; /* Për ta bërë rrethore */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Hijë për efekt më të bukur */
+    z-index: 1000; /* Mbi të gjitha elementet e tjera */
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Rritje e lehtë kur vendoset miu mbi të */
+    background-color: #1ebe57; /* Ngjyra pak më e errët për hover */
+}
+
+.whatsapp-float i {
+    font-size: 24px; /* Madhësia e ikonës */
+}
+
+.our__mission {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.our__mission .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.our__mission h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.our__mission h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+}
+
+.our__mission p {
+  font-size: 1rem;
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Sfond i lehtë gri */
+}
+
+#customer-reviews {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#customer-reviews h2 {
+  font-size: 2.5rem;
+  color: #ff914d; /* Ngjyrë portokalli për titullin */
+  margin-bottom: 40px;
+}
+
+.review {
+  background: #ffffff; /* Kutitë me sfond të bardhë */
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hije për thellësi */
+  max-width: 600px;
+}
+
+.review p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.rating {
+  font-size: 1.5rem;
+  color: #ffd700; /* Ngjyrë ari për yjet */
+  margin: 10px 0;
+}
+
+.author {
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+}
+
+
+
+
+
+.share-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #007BFF; /* Ngjyra blu */
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.share-button:hover {
+  background-color: #0056b3; /* Blu më e errët */
+  transform: scale(1.05); /* Zmadhohet pak kur kalon miu sipër */
+}
+
+.share-button:active {
+  transform: scale(0.95); /* Zvogëlohet kur klikoni */
+}
+
+
+
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.floating-share {
+  position: fixed;
+  bottom: 20px; /* Distance from bottom */
+  left: 20px;   /* Distance from left */
+  width: 50px;
+  height: 50px;
+  background-color: #25D366; /* WhatsApp green */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.floating-share img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1); /* Make icon white */
+}
+
+.floating-share:hover {
+  background-color: #20b15d; /* Darker green on hover */
+}
+
+
+
+
+
+/* Stili për butonat rrethor */
+.circle-button {
+  position: fixed;
+  top: 50%; /* Pozicionimi në mes vertikalisht */
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: black;
+  border: 2px solid black; /* Kufiri rrethor */
+  border-radius: 50%; /* Për ta bërë rrethore */
+  width: 50px; /* Gjerësia e butonit */
+  height: 50px; /* Lartësia e butonit */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px; /* Madhësia e shigjetës */
+  font-weight: bold;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.circle-button:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(-50%) scale(1.1); /* Efekt për rritje kur vendoset miu mbi */
+}
+
+/* Pozicionimi i butonit të majtë (Back) */
+.back-button {
+  left: 20px; /* Afër anës së majtë */
+}
+
+/* Pozicionimi i butonit të djathtë (Next) */
+.next-button {
+  right: 20px; /* Afër anës së djathtë */
+}
+
+/* Shtim opsional për pajisje mobile */
+@media (max-width: 768px) {
+  .circle-button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer-section ul.social-share {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Për hapësirë ndërmjet ikonave */
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer-section ul.social-share {
+    display: flex;
+    flex-direction: row; /* I vendos ikonat në një rresht */
+    justify-content: center; /* Qendërzon ikonat */
+    align-items: center; /* Qendërzon vertikalisht */
+    margin: 0 auto; /* Siguron qendërzimin e saktë */
+    gap: 1rem; /* Hapësirë mes ikonave */
+  }
+}

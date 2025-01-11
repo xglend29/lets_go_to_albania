@@ -100,26 +100,6 @@ nav {
 
 
 
-
-
-.search__box {
-  padding: 0.5rem 0;
-  border-bottom: 2px solid var(--extra-light);
-}
-
-.search__box input {
-  color: var(--extra-light);
-  background-color: transparent;
-  outline: none;
-  border: none;
-}
-
-.search__box i {
-  color: var(--extra-light);
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
 .container__left,
 .container__right {
   flex: 1;
@@ -175,6 +155,7 @@ button.read__more {
 button.our__blogs:hover {
   background-color: var(--text-light);
 }
+
 
 .chevrons {
   display: flex;
@@ -776,3 +757,176 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px; /* Distanca nga fundi i ekranit */
+  right: 20px; /* Distanca nga ana e djathtë */
+  background-color: #25d366; /* Ngjyra e sfondit (ngjyra e WhatsApp-it) */
+  color: white;
+  border-radius: 50%; /* Për ta bërë rrethore */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Hijë për efekt më të bukur */
+  z-index: 1000; /* Mbi të gjitha elementet e tjera */
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1); /* Rritje e lehtë kur vendoset miu mbi të */
+  background-color: #1ebe57; /* Ngjyra pak më e errët për hover */
+}
+
+.whatsapp-float i {
+  font-size: 24px; /* Madhësia e ikonës */
+}
+
+
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.floating-share {
+  position: fixed;
+  bottom: 20px; /* Distance from bottom */
+  left: 20px;   /* Distance from left */
+  width: 50px;
+  height: 50px;
+  background-color: #25D366; /* WhatsApp green */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.floating-share img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1); /* Make icon white */
+}
+
+.floating-share:hover {
+  background-color: #20b15d; /* Darker green on hover */
+}
+
+
+/* Stili për të dy butonat */
+.nav-button {
+  position: fixed;
+  background-color: #000; /* Ngjyra e zezë */
+  color: white; /* Ngjyra e tekstit */
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.nav-button:hover {
+  background-color: #444; /* Ngjyra gjatë hover */
+}
+
+/* Pozicionimi për butonin "Back" */
+.back-button {
+  top: 50%; /* Në mes të faqes */
+  left: 20px; /* Pranë anës së majtë */
+  transform: translateY(-50%); /* Rreshtimi në qendër vertikalisht */
+}
+
+/* Pozicionimi për butonin "Next" */
+.next-button {
+  top: 50%; /* Në mes të faqes */
+  right: 20px; /* Pranë anës së djathtë */
+  transform: translateY(-50%); /* Rreshtimi në qendër vertikalisht */
+}
+
+/* Sfondi dhe përmbajtja për testim */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 2000px; /* Për ta bërë faqen e gjatë për scroll */
+  background-color: #f9f9f9;
+}
+
+.content {
+  padding: 100px;
+  text-align: center;
+}
+
+
+
+/* Stili për butonat rrethor */
+.circle-button {
+  position: fixed;
+  top: 50%; /* Pozicionimi në mes vertikalisht */
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: black;
+  border: 2px solid black; /* Kufiri rrethor */
+  border-radius: 50%; /* Për ta bërë rrethore */
+  width: 50px; /* Gjerësia e butonit */
+  height: 50px; /* Lartësia e butonit */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px; /* Madhësia e shigjetës */
+  font-weight: bold;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.circle-button:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(-50%) scale(1.1); /* Efekt për rritje kur vendoset miu mbi */
+}
+
+/* Pozicionimi i butonit të majtë (Back) */
+.back-button {
+  left: 20px; /* Afër anës së majtë */
+}
+
+/* Pozicionimi i butonit të djathtë (Next) */
+.next-button {
+  right: 20px; /* Afër anës së djathtë */
+}
+
+/* Shtim opsional për pajisje mobile */
+@media (max-width: 768px) {
+  .circle-button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+
+
+

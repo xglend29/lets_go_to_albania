@@ -2,9 +2,12 @@
 
 :root {
   --primary-color: #fead53;
+  --secondary-color: #333333;
   --text-dark: #333333;
   --text-light: #ffffff33;
   --extra-light: #f3f4f6;
+  --accent-color: #ff8c00;
+  --hover-accent-color: darkorange;
   --max-width: 1300px;
 }
 
@@ -24,49 +27,34 @@ input::placeholder {
 
 body {
   font-family: "Open Sans", sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-
-.hero__section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.hero__image {
-  background-image: url('assets/image_75.jpg');
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("assets/image_75.jpg");
   background-position: center center;
   background-size: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
-
 
 header {
-  padding: 1.5rem;
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 2rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  z-index: 1;
 }
 
-
-header .logo__area a {
+.logo__area a {
   font-size: 1.5rem;
-  font-weight: 700;
-  color: #ffffff;
-  text-transform: uppercase; 
+  font-weight: 600;
+  color: var(--extra-light);
 }
-
 
 .navigation__menu {
   list-style: none;
@@ -78,19 +66,9 @@ header .logo__area a {
 .navigation__menu .menu__item {
   font-size: 1.2rem;
   font-weight: 500;
-  color: #ffffff; 
   cursor: pointer;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
-
-.navigation__menu .menu__item:hover {
-  color: var(--primary-color); 
-
-
-  
-}
-
-
 
 
 .navigation__menu .menu__item a {
@@ -104,76 +82,62 @@ header .logo__area a {
 }
 
 
-
-.about__us__section {
-  position: relative;
-  padding: 4rem 2rem;
-  background-color: #fff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  margin-top: 100vh;
+.hero-section {
+  padding: 50px 0;
+  background-color: var(--extra-light);
 }
 
-.about__us__content h2 {
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
   font-size: 2.5rem;
   color: var(--primary-color);
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-.about__us__content p {
+.hero-content h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
   font-size: 1.1rem;
   color: var(--text-dark);
-  line-height: 1.7;
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-
-.reviews__section {
-  background-color: var(--extra-light);
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-.reviews__section h2 {
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  font-weight: 600;
   margin-bottom: 2rem;
 }
 
-.review {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  max-width: 800px;
-  margin: 1rem auto;
-  text-align: left;
-}
-
-.review p {
-  font-size: 1.2rem;
-  color: var(--text-dark);
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.stars {
-  color: #FFD700;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-
-.footer-contact i, .footer-contact p a {
+.btn {
+  display: inline-block;
+  background-color: var(--accent-color);
   color: #fff;
-  margin-right: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
 }
+
+.btn:hover {
+  background-color: var(--hover-accent-color);
+}
+
 
 .footer-contact i {
   font-size: 20px;
@@ -218,7 +182,7 @@ footer {
 }
 
 .footer-section h3 {
-  color: #4CA1AF;
+  color: #4CA1AF; 
   margin-bottom: 15px;
   font-size: 18px;
 }
@@ -280,119 +244,116 @@ footer {
   color: #4CA1AF;
 }
 
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: orange; 
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: orange;
+}
+
+
+
 
 @media (max-width: 768px) {
- 
-  .nav__links {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .navigation__menu {
     flex-direction: column;
     gap: 1rem;
   }
 
-  nav {
-    padding: 1rem;
+  .main__content {
     flex-direction: column;
-  }
-
-  .nav__logo a {
-    font-size: 1.2rem;
-  }
-
-
-  .content h1 {
-    font-size: 2.5rem;
-    line-height: 3rem;
-  }
-
-  .btns button {
-    padding: 0.5rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
-
-  .contact-info {
-    flex-direction: column;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .contact-item {
-    margin: 10px 0;
-    max-width: 100%;
-  }
-
- 
-  .container {
     padding: 1rem;
-    height: auto; 
   }
 
-
-  .image-section img {
-    max-width: 200px;
-    height: auto;
+  .text__content h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 
-  .text-section h1 {
+  .tour-packages h2 {
     font-size: 2rem;
   }
 
-  .text-section p {
-    font-size: 1rem;
-  }
-
-  .text-section .button {
-    font-size: 1rem;
-    padding: 8px 16px;
-  }
-
-
-  .footer-container {
+  .package-container {
     flex-direction: column;
-    padding: 1rem;
-    text-align: center;
+    align-items: center;
   }
 
-  .footer-section {
-    margin: 0 auto 20px auto;
+  .package {
+    width: 90%; 
+    margin-bottom: 1rem;
+  }
+
+  .tour-features {
+    grid-template-columns: 1fr; 
+  }
+
+  .hero-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-content {
     max-width: 100%;
   }
 
-
-  .footer-section ul li {
-    margin-bottom: 8px;
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .footer-section ul li a {
-    font-size: 14px;
-  }
-
-
-  .new-section {
-    padding: 20px 10px;
+  .footer-section {
+    min-width: 100%;
     text-align: center;
   }
 
-  .new-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .new-section p {
-    font-size: 1rem;
-  }
-
-  
-  .bottom__tracker {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .bottom__tracker span {
-    width: 70px;
-  }
-
-
-  .tab {
-    padding: 8px 12px;
-    font-size: 0.9rem;
+  .tour-item img {
+    width: 100%; 
+    height: auto;
   }
 }
+
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; /* Distanca nga fundi i ekranit */
+    right: 20px; /* Distanca nga ana e djathtë */
+    background-color: #25d366; /* Ngjyra e sfondit (ngjyra e WhatsApp-it) */
+    color: white;
+    border-radius: 50%; /* Për ta bërë rrethore */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Hijë për efekt më të bukur */
+    z-index: 1000; /* Mbi të gjitha elementet e tjera */
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Rritje e lehtë kur vendoset miu mbi të */
+    background-color: #1ebe57; /* Ngjyra pak më e errët për hover */
+}
+
+.whatsapp-float i {
+    font-size: 24px; /* Madhësia e ikonës */
+}
+
+
